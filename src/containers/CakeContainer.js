@@ -1,10 +1,11 @@
+import './App.css';
 import {useState} from "react";
 import CakeList from "../components/CakeList";
 import CakeRegister from "../components/CakeRegister";
 
 const CakeContainer = () => {
 
-    const [cakes] = useState([
+    const [cakes, setCakes] = useState([
         {
             cakeName: "Lemon Drizzle",
             ingredients: ["eggs", "butter", "lemon  zest", "sugar", "self-raising flour"],
@@ -25,22 +26,46 @@ const CakeContainer = () => {
             ingredients: ["carrots", "walnuts", "oil", "cream cheese", "flour", "sugar"],
             rating: 5
         }
-      ])
- 
+      ]);
+
+    const addCake = (newCake) => {
+        setCakes([...cakes, newCake]);
+    }
+
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearch = (event) => {
+        setSearchQuery(event.target.value);
+    }
+
+    const filteredCakes = cakes.filter(cake =>
+        cake.cakeName.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    
+
   return (
     <>
-      <h1>Recipes</h1>
+      <h1>Cakes</h1>
+      
+      <form className='search-form'>
+      <input
+      type="text"
+      placeholder='search for cake...'
+      value= {searchQuery}
+      onChange={handleSearch}
+      />
+    </form>
       <div className="cakes">
-      {cakes.map(cake => (
+      {filteredCakes.map((cake, index) => (
                 <CakeList
-                    key={cake.cakeName}
+                    key={index}
                     cakeName={cake.cakeName}
                     ingredients={cake.ingredients}
                     rating={cake.rating}
                 />
         ))}
       </div>
-
+      <CakeRegister addCake = {addCake }/>
     </>
   );
 };

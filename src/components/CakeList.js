@@ -1,10 +1,15 @@
+import './App.css';
 import React from "react"
-const CakeList = ({cakeName, ingredients, rating}) => {
+const CakeList = ({cakeName, ingredients, rating }) => {
     
     return (
         <div className="cake">
         <h3>{cakeName}</h3>
-        <p> Ingredients: {ingredients.join(', ')} </p>
+        <ul>
+                {ingredients.map( (ingredient, index) => {
+                    return <li>{ingredient}</li>
+                })}
+            </ul>
         <p> Rating {rating} </p>
             </div>
     )

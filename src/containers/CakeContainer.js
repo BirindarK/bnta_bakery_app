@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 import {useState} from "react";
 import CakeList from "../components/CakeList";
 import CakeRegister from "../components/CakeRegister";
@@ -44,8 +44,9 @@ const CakeContainer = () => {
     
 
   return (
-    <>
+    <div className = "cakes">
       <h1>Cakes</h1>
+
       
       <form className='search-form'>
       <input
@@ -65,8 +66,8 @@ const CakeContainer = () => {
                 />
         ))}
       </div>
-      <CakeRegister addCake = {addCake }/>
-    </>
+      <CakeRegister addCake = {addCake}/>
+    </div>
   );
 };
 

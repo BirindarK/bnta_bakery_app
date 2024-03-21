@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 import React from "react"
 const CakeList = ({cakeName, ingredients, rating }) => {
     
@@ -6,7 +6,7 @@ const CakeList = ({cakeName, ingredients, rating }) => {
         <div className="cake">
         <h3>{cakeName}</h3>
         <ul>
-                {ingredients.map( (ingredient, index) => {
+                Ingredients: {ingredients.map( (ingredient, index) => {
                     return <li>{ingredient}</li>
                 })}
             </ul>

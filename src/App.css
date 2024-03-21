@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #f6e5e5;
+  color: white;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #352961;
+  border: 2px solid #f6e5e5;
+  color: white;
+}
+
+.navBar h1{
+  font-style: bold;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 102px #774181,
+    0 0 145px #774181;
+}
+
+.navBar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navBar ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navBar a:hover {
+  color: #e6b2c6; ;
+}
+
+.cake {
+  display: grid;
+  margin: 10px;
+  border: 4px solid #352961;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px ;
+  background-color: #774181;
+  color: white;
+  padding: 10px; 
+}
+
+.cake h3 {
+  margin-top: 0;
+}
+
+.cake ul {
+  text-align: left;
+}
+
+.cake ul li {
+  margin-bottom: 5px;
+}
+
+.cake p {
+  text-align: left;
+  margin-left: 43px;
+}
+
+.cakes {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 12px;
+  color: #ffe9e3;
+  padding: 10px; 
+}
+

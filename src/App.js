@@ -10,9 +10,9 @@ function App() {
       <h1>BNTA Bakery </h1>
       <nav>
         <ul>
-    <li>About</li>
-    <li>Recipes</li>
-    <li>Allergens</li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Recipe</a></li>
+        <li><a href="#">Allergens</a></li>
         </ul>
       </nav>
       </div>

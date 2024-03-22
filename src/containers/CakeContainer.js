@@ -44,9 +44,10 @@ const CakeContainer = () => {
     
 
   return (
+    <>
     <div className = "cakes">
       <h1>Cakes</h1>
-
+    </div>
       
       <form className='search-form'>
       <input
@@ -56,7 +57,7 @@ const CakeContainer = () => {
       onChange={handleSearch}
       />
     </form>
-      <div className="cakes">
+      <div className="cake-map">
       {filteredCakes.map((cake, index) => (
                 <CakeList
                     key={index}
@@ -67,7 +68,8 @@ const CakeContainer = () => {
         ))}
       </div>
       <CakeRegister addCake = {addCake}/>
-    </div>
+    
+    </>
   );
 };
 

@@ -30,7 +30,7 @@ const CakeRegister = ({ addCake }) => {
     };
 
     return (
-        <>
+        <div className = "register">
             <h2>Add Cake</h2>
             <form onSubmit={handleSubmit}>
                 <input
@@ -56,7 +56,7 @@ const CakeRegister = ({ addCake }) => {
                 />
                 <input type="submit" value="Submit" />
             </form>
-        </>
+        </div>
     );
 };
 

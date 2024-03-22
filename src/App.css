@@ -90,10 +90,10 @@ body{
   border: 4px solid #352961;
   width: 100%;
   height: 300px;
-  border-radius: 12px ;
+  border-radius: 12px;
   background-color: #774181;
   color: white;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .cake h3 {
@@ -102,6 +102,8 @@ body{
 
 .cake ul {
   text-align: left;
+  list-style-type: none;
+  padding: 0;
 }
 
 .cake ul li {
@@ -110,17 +112,123 @@ body{
 
 .cake p {
   text-align: left;
-  margin-left: 43px;
 }
 
 .cakes {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  justify-content: space-evenly; 
   align-items: center;
   margin: 10px;
   border-radius: 12px;
-  color: #ffe9e3;
+  color: white;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #774181,
+    0 0 102px #774181,
+    0 0 145px #774181;
   padding: 10px; 
 }
+
+.cake-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 50px; 
+    justify-content: space-evenly; 
+    margin: 10px;
+    border-radius: 12px;
+    color: white;
+    padding: 10px; 
+  }
+
+.search-form {
+  display: flex;
+  justify-content: flex-end; 
+  margin-bottom: 20px; 
+  margin-right: 15px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px; 
+  width: 300px; 
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+}
+
+.search-form input[type="text"]:focus {
+  outline: none; 
+  border-color: #774181; 
+}
+
+.cake-map {
+  display: grid;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid#774181;
+  background-color: #352961;
+  border-radius: 12px;
+  width: 500px;
+  margin-left: 30%;
+  margin-bottom: 15px;
+
+}
+
+.register h2 {
+  color: white;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #774181,
+    0 0 102px #774181,
+    0 0 145px #774181;
+    text-align: center;
+
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 50px;
+  margin: 50px;
+}
+
+.register form input {
+  margin-bottom: 10px; 
+  outline: none; 
+  border-color: #774181; 
+}
+
+.register form input[type="submit"] {
+  align-items: center;
+  background-color: #774181;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px
+}
+
+.register form input[type="submit"]:hover {
+  background-color: #5e366e;
+}
+
+.register form input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register form input[type="text"]:focus {
+  outline: none;
+  border-color: #774181;
+}
+
 
